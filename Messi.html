@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sitio interactivo tributo a Lionel Messi">
+  <title>Lionel Messi — Fan Page & Estadísticas</title>
+  <link rel="icon" href="./img/Messi.jpg">
+  <link rel="stylesheet" href="./estilos.css">
+</head>
+<body>
+
+  <header>
+    <img src="./img/copa.png" alt="Lionel Messi con la Copa del Mundo" class="avatar">
+    <h1>Lionel Andrés Messi</h1>
+    <p id="subtitulo">El Rey del Fútbol · Leyenda Viviente</p>
+    <nav>
+      <a href="#biografia">Biografía</a>
+      <a href="#palmares">Palmarés</a>
+      <a href="#comunidad">Comunidad Fans</a>
+      <a href="#contacto">Escríbele a Leo</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="biografia">
+      <h2>Sobre la Leyenda</h2>
+      <p>Considerado por muchos como el mejor futbolista de todos los tiempos. Ganador del Mundial de Qatar 2022 y múltiple galardonado del Balón de Oro.</p>
+      <figure>
+        <img src="./img/gol.png" alt="Messi celebrando un gol" class="img-seccion">
+        <figcaption>Momento icónico en la carrera de Lionel Messi.</figcaption>
+      </figure>
+    </section>
+
+    <section id="palmares">
+      <h2>Palmarés Destacado</h2>
+      <table class="tabla-palmares">
+        <caption>Títulos más importantes</caption>
+        <thead>
+          <tr>
+            <th scope="col">Competencia</th>
+            <th scope="col">Equipo</th>
+            <th scope="col">Año</th>
+            <th scope="col">Cantidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Copa Mundial de la FIFA</td>
+            <td>Argentina</td>
+            <td>2022</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>UEFA Champions League</td>
+            <td>FC Barcelona</td>
+            <td>2006, 2009, 2011, 2015</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>Balón de Oro</td>
+            <td>Individual</td>
+            <td>2009-2023</td>
+            <td>8</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="comunidad">
+      <h2>Muro de Fans (Modelo de Datos en Memoria)</h2>
+      <p>Agrega tu momento favorito de Messi a nuestro registro dinámico:</p>
+      
+      <div class="formulario-interactivo">
+        <div class="campo">
+          <label for="nuevo-momento">Momento Histórico:</label>
+          <input type="text" id="nuevo-momento" placeholder="Ej: Gol a Holanda en 2022">
+        </div>
+        <button id="btn-agregar" type="button">Agregar Momento</button>
+      </div>
+
+      <ul id="lista-momentos" class="lista-interactiva">
+        </ul>
+    </section>
+
+    <section id="contacto">
+      <h2>Envía un Mensaje de Apoyo</h2>
+      <form id="form-contacto">
+        <div class="campo">
+          <label for="nombre">Nombre Completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required>
+        </div>
+        <div class="campo">
+          <label for="correo">Correo Electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
+        </div>
+        <div class="campo">
+          <label for="pais">País</label>
+          <select id="pais" name="pais">
+            <option value="colombia">Colombia</option>
+            <option value="argentina">Argentina</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="mensaje">Tu Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        </div>
+        <div class="campo check-campo">
+          <label><input type="checkbox" id="terminos" required> Acepto publicar mi mensaje en el club de fans</label>
+        </div>
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+      <p id="respuesta-form" class="mensaje-exito"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="anio"></span> — Fan Page Oficial creada para Laboratorio Web</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
